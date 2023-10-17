@@ -1,0 +1,188 @@
+namespace Piano
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Приветствую тебя в пианино!");
+            Console.WriteLine("Нажми:");
+            Console.WriteLine("1 - для игры на пианино");
+            Console.WriteLine("2 - для выхода");
+
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    PlayPiano();
+                    break;
+                case "2":
+                    Console.WriteLine("Пока!");
+                    break;
+                default:
+                    Console.WriteLine("Некорректный ввод.");
+                    break;
+            }
+        }
+
+        static void PlayPiano()
+        {
+            Console.WriteLine("Вы можете начинать играть на пианино.");
+            Console.WriteLine("Для игры нажмите клавиши от A до U, где черные клавиши обозначены символом #.\n");
+
+            bool playing = true;
+
+            while (playing)
+            {
+                string input = Console.ReadLine().ToUpper();
+                PlayNoteByInput(input);
+            }
+        }
+
+        static void PlayNoteByInput(string input)
+        {
+            switch (input)
+            {
+                case "A":
+                    Console.Clear();
+                    Console.Beep(261, 500);
+                    break;
+                case "A#":
+                    Console.Clear();
+                    Console.Beep(277, 500);
+                    break;
+                case "B":
+                    Console.Clear();
+                    Console.Beep(293, 500);
+                    break;
+                case "C":
+                    Console.Clear();
+                    Console.Beep(261, 500);
+                    break;
+                case "C#":
+                    Console.Clear();
+                    Console.Beep(277, 500);
+                    break;
+                case "D":
+                    Console.Clear();
+                    Console.Beep(293, 500);
+                    break;
+                case "D#":
+                    Console.Clear();
+                    Console.Beep(311, 500);
+                    break;
+                case "E":
+                    Console.Clear();
+                    Console.Beep(329, 500);
+                    break;
+                case "F":
+                    Console.Clear();
+                    Console.Beep(349, 500);
+                    break;
+                case "F#":
+                    Console.Clear();
+                    Console.Beep(370, 500);
+                    break;
+                case "G":
+                    Console.Clear();
+                    Console.Beep(392, 500);
+                    break;
+                case "G#":
+                    Console.Clear();
+                    Console.Beep(415, 500);
+                    break;
+                case "H":
+                    Console.Clear();
+                    Console.Beep(440, 500);
+                    break;
+                case "H#":
+                    Console.Clear();
+                    Console.Beep(466, 500);
+                    break;
+                case "I":
+                    Console.Clear();
+                    Console.Beep(493, 500);
+                    break;
+                case "J":
+                    Console.Clear();
+                    Console.Beep(523, 500);
+                    break;
+                case "J#":
+                    Console.Clear();
+                    Console.Beep(554, 500);
+                    break;
+                case "K":
+                    Console.Clear();
+                    Console.Beep(587, 500);
+                    break;
+                case "L":
+                    Console.Clear();
+                    Console.Beep(622, 500);
+                    break;
+                case "L#":
+                    Console.Clear();
+                    Console.Beep(659, 500);
+                    break;
+                case "M":
+                    Console.Clear();
+                    Console.Beep(698, 500);
+                    break;
+                case "M#":
+                    Console.Clear();
+                    Console.Beep(739, 500);
+                    break;
+                case "N":
+                    Console.Clear();
+                    Console.Beep(783, 500);
+                    break;
+                case "O":
+                    Console.Clear();
+                    Console.Beep(830, 500);
+                    break;
+                case "O#":
+                    Console.Clear();
+                    Console.Beep(880, 500);
+                    break;
+                case "P":
+                    Console.Clear();
+                    Console.Beep(932, 500);
+                    break;
+                case "Q":
+                    Console.Clear();
+                    Console.Beep(987, 500);
+                    break;
+                case "Q#":
+                    Console.Clear();
+                    Console.Beep(1046, 500);
+                    break;
+                case "R":
+                    Console.Clear();
+                    Console.Beep(1108, 500);
+                    break;
+                case "R#":
+                    Console.Clear();
+                    Console.Beep(1174, 500);
+                    break;
+                case "S":
+                    Console.Clear();
+                    Console.Beep(1244, 500);
+                    break;
+                case "S#":
+                    Console.Clear();
+                    Console.Beep(1318, 500);
+                    break;
+                case "T":
+                    Console.Clear();
+                    Console.Beep(1396, 500);
+                    break;
+                case "U":
+                    Console.Clear();
+                    Console.Beep(1474, 500);
+                break;
+                default:
+                    Console.WriteLine("Некорректный ввод.");
+                    break;
+            }
+        }
+    }
+}
